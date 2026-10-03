@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const PORT = process.env.PORT || 3002;
-const uri = process.env.MONGO_URL || 3002;
+const uri = process.env.MONGO_URL;
 const HoldingsModel = require("./model/HoldingsModel");
 const PostionsModel = require("./model/PostionsModel");
 const OrdersModel = require("./model/OrdersModel");
@@ -215,6 +215,7 @@ app.post("/newOrder",async(req,res)=> {
 });
 
 
-app.listen("3002",() =>  {
-    console.log("App started!..");
-})
+
+app.listen(PORT, () => {
+    console.log(`App started on port ${PORT}...`);
+});

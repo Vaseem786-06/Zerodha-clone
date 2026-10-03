@@ -7,9 +7,11 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "devDependencies": {
-      "nodemon": "^3.0.1"
-    }
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   },
   "dependencies": {
     "body-parser": "^2.3.0",
