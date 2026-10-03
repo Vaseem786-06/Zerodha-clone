@@ -214,7 +214,9 @@ app.post("/newOrder",async(req,res)=> {
     res.send("Order Saved!..")
 });
 
-
+app.get("/", (req, res) => {
+  res.send("Zerodha Clone Backend is running successfully!");
+});
 
 app.listen(PORT, () => {
     console.log(`App started on port ${PORT}...`);
